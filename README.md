@@ -299,16 +299,17 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 public interface PayHistoryRepository extends PagingAndSortingRepository<payHistory, Long>{
 }
 ```
-- 적용 후 REST API 의 테스트
 
+- 적용 후 REST API 의 테스트
+```
 # app 서비스의 주문처리
 http localhost:8081/orders burgerName=BigMac orderedQty=3 customerId=1
-
+```
 ![image](https://user-images.githubusercontent.com/69283665/97409003-4750a180-1940-11eb-8ead-7ed9ec708ab6.png)
 ```
 # 주문 상태 확인
 http localhost:8081/ordes/7
-
+```
 ![image](https://user-images.githubusercontent.com/69283665/97409925-bda1d380-1941-11eb-89e2-cfe642f652a8.png)
 ```
 
