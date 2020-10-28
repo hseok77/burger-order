@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/69283682/97240849-b8099800-1832-11eb-9170-c4a4b56d113b.png)
 
 # 예제 - 버거주문
-![image](https://user-images.githubusercontent.com/69283665/97409003-4750a180-1940-11eb-8ead-7ed9ec708ab6.png)
+
 본 예제는 MSA/DDD/Event Storming/EDA 를 포괄하는 분석/설계/구현/운영 전단계를 커버하도록 구성한 예제입니다.
 이는 클라우드 네이티브 애플리케이션의 개발에 요구되는 체크포인트들을 통과하기 위한 예시 답안을 포함합니다.
 - 체크포인트 : https://workflowy.com/s/assessment-check-po/T5YrzcMewfo4J6LW
@@ -304,7 +304,7 @@ public interface PayHistoryRepository extends PagingAndSortingRepository<payHist
 ```
 # app 서비스의 주문처리
 http localhost:8081/orders burgerName=BigMac orderedQty=3 customerId=1
-![image](https://user-images.githubusercontent.com/69283665/97408727-d9a47580-193f-11eb-8e21-aaf758fd64ea.png)
+![image](https://user-images.githubusercontent.com/69283665/97409003-4750a180-1940-11eb-8ead-7ed9ec708ab6.png)
 
 # 주문 상태 확인
 http localhost:8081/ordes/1
