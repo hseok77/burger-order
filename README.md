@@ -304,6 +304,7 @@ public interface PayHistoryRepository extends PagingAndSortingRepository<payHist
 ```
 # app 서비스의 주문처리
 http localhost:8081/orders burgerName=BigMac orderedQty=3 customerId=1
+![image](https://user-images.githubusercontent.com/69283665/97408727-d9a47580-193f-11eb-8e21-aaf758fd64ea.png)
 
 # 주문 상태 확인
 http localhost:8081/ordes/1
