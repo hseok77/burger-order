@@ -6,7 +6,7 @@
 이는 클라우드 네이티브 애플리케이션의 개발에 요구되는 체크포인트들을 통과하기 위한 예시 답안을 포함합니다.
 - 체크포인트 : https://workflowy.com/s/assessment-check-po/T5YrzcMewfo4J6LW
 
-
+![image](https://user-images.githubusercontent.com/69283665/97409003-4750a180-1940-11eb-8ead-7ed9ec708ab6.png)
 # Table of contents
 
 - [예제 - 버거주문](#---)
@@ -304,6 +304,7 @@ public interface PayHistoryRepository extends PagingAndSortingRepository<payHist
 ```
 # app 서비스의 주문처리
 http localhost:8081/orders burgerName=BigMac orderedQty=3 customerId=1
+
 ![image](https://user-images.githubusercontent.com/69283665/97409003-4750a180-1940-11eb-8ead-7ed9ec708ab6.png)
 
 # 주문 상태 확인
