@@ -455,9 +455,10 @@ public interface PayHistoryService {
 # 결제 (pay) 서비스를 잠시 내려놓음 (ctrl+c)
 
 #주문처리
-http localhost:8081/orders burgerName=BigMac orderedQty=3 customerId=2   #Fail / Internal Server Error
-http localhost:8081/orders burgerName=SmallMac orderedQty=2 customerId=3   #Fail / Internal Server Error
-
+http localhost:8081/orders burgerName=BigMac orderedQty=3 customerId=1   #Fail / Internal Server Error
+```
+![image](https://user-images.githubusercontent.com/69283665/97413757-841f9700-1946-11eb-92b8-7490de3c5c31.png)
+```
 #결제서비스 재기동
 cd pay
 mvn spring-boot:run
@@ -466,6 +467,8 @@ mvn spring-boot:run
 http localhost:8081/orders burgerName=BigMac orderedQty=3 customerId=2   #Success
 http localhost:8081/orders burgerName=SmallMac orderedQty=2 customerId=3   #Success
 ```
+
+
 
 - 또한 과도한 요청시에 서비스 장애가 도미노 처럼 벌어질 수 있다. (서킷브레이커, 폴백 처리는 운영단계에서 설명한다.)
 
