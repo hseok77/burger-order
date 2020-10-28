@@ -464,8 +464,7 @@ cd pay
 mvn spring-boot:run
 
 #주문처리
-http localhost:8081/orders burgerName=BigMac orderedQty=3 customerId=2   #Success
-http localhost:8081/orders burgerName=SmallMac orderedQty=2 customerId=3   #Success
+http localhost:8081/orders burgerName=BigMac orderedQty=3 customerId=1   #Success
 ```
 ![image](https://user-images.githubusercontent.com/69283665/97414383-4111f380-1947-11eb-9ce0-abcab789b071.png)
 
