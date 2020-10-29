@@ -322,52 +322,6 @@ pom.xml에 hsql 사용
 ![image](https://user-images.githubusercontent.com/69283665/97524526-3e1b0f80-19e8-11eb-8a97-1d14f250c851.png)
 
 
-## 폴리글랏 프로그래밍
-
-상점관리(요리, 배달 등) 각 이벤트를 수신하여 처리하는 Kafka consumer 로 구현되었고 코드는 다음과 같다:
-```
-ackage newmcdonaldapp;
-
-import javax.persistence.*;
-import org.springframework.beans.BeanUtils;
-import java.util.List;
-
-@Entity
-@Table(name="StoreManagement_table")
-public class StoreManagement {
-
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
-    private Long orderId;
-    private Long burgerId;
-
-    @PrePersist
-    public void onPrePersist(){
-
-        try {
-            Thread.currentThread().sleep((long) (400 + Math.random() * 220));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        CookStarted cookStarted = new CookStarted();
-        BeanUtils.copyProperties(this, cookStarted);
-        cookStarted.publishAfterCommit();
-
-        try {
-            Thread.currentThread().sleep((long) (5000 + Math.random() * 220));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        DeliveryStart deliveryStart = new DeliveryStart();
-        BeanUtils.copyProperties(this, deliveryStart);
-        deliveryStart.publishAfterCommit();
-
-    }
-..
-}
-```
 
 애플리케이션을 컴파일하고 실행하기 위한 도커파일은 아래와 같다
 ```
@@ -538,6 +492,12 @@ mvn spring-boot:run
 #주문상태 확인
 http localhost:8080/orders     # 모든 주문의 상태가 "InDelivery"로 확인
 ![image](https://user-images.githubusercontent.com/69283682/97387276-0729f880-1919-11eb-90fc-959bb5ef285d.png)
+
+# CQRS 적용
+
+
+
+# GATEWAY 적용
 
 
 
