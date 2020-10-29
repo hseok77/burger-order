@@ -498,7 +498,7 @@ http localhost:8080/orders     # 모든 주문의 상태가 "InDelivery"로 확�
 
 
 # GATEWAY 적용
-
+![image](https://user-images.githubusercontent.com/69283665/97532760-5d229d00-19fa-11eb-8c38-2265cc3db452.png)
 
 
 # 운영
