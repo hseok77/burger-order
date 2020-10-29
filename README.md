@@ -308,49 +308,19 @@ http localhost:8081/ordes/7
 
 ## 폴리글랏 퍼시스턴스
 
-```
-# Order.java
-
-package newmcdonaldapp;
-
-import javax.persistence.*;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.BeanUtils;
-import org.springframework.context.ApplicationContext;
-
-import java.util.List;
-import java.util.Optional;
-
-@Entity
-@Table(name="Order_table")
-public class Order {
-
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
-    private Long burgerId;
-    private String burgerName;
-    private int orderedQty;
-    private int totalPrice;
-    private Long customerId;
-    private String state = "Created";
-
-}
-
-
-# PayHistoryRepository.java
-package newmcdonaldapp;
-
-import org.springframework.data.repository.PagingAndSortingRepository;
-
-public interface PayHistoryRepository extends PagingAndSortingRepository<PayHistory, Long>{
-
-
-}
+pom.xml에 hsql 사용
 
 ```
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.4.0</version>
+			<scope>runtime</scope>
+		</dependency>
+
+```
+
+
 
 ## 폴리글랏 프로그래밍
 
